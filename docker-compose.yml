@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  tailor-management-system:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: tailor-management-system
+    ports:
+      - "8080:8080"
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://localhost:5432/nishant_db
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=root123
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+      - SPRING_JPA_DATABASE_PLATFORM=org.hibernate.dialect.PostgreSQLDialect
+      - SPRING_PROFILES_ACTIVE=dev
+    depends_on:
+      - db
+    networks:
+      - tailor-network
+
+  db:
+    image: TMS:Latest
+    container_name: TMS-app
+    environment:
+      - POSTGRES_PASSWORD=root123
+      - POSTGRES_DATABASE=tailor_management
+    ports:
+      - "5432:5432"
+    networks:
+      - tailor-network
+
+networks:
+  tailor-network:
+    driver: bridge

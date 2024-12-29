@@ -1,0 +1,225 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+	background-color: black;
+	}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+	font-size: 25px;
+	font-family: cursive;
+}
+nav ul li a:hover{
+	color: gold;
+}
+
+
+
+
+
+
+#front-home{
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	justify-content: space-evenly;
+	background-color: black;
+	padding: 100px;
+}
+.appointment h1{
+	color: goldenrod;
+}
+.appointment h2{
+		color: gold;
+}
+.appointment-pic img{
+	height: 350px;
+	width: 450px;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.appointment h1{
+	font-size: 50px;
+	font-family: cursive;
+}
+.appointment h2{
+	font-size: 40px;
+	font-family: serif;
+}
+.appointment a{
+	padding-top: 10px;
+	text-decoration: none;
+	color: white;
+	transition: 200ms ease-in-out;
+	transition-property: padding;
+	border-radius: 10px;
+}
+.appointment a:hover{
+	background-color: gold;
+	padding: 20px;
+	color: red;
+}
+
+
+
+
+
+
+
+#advice{
+	display: flex;
+	justify-content: center;
+	text-align: center;
+	justify-content: space-evenly;
+	padding-top: 80px;
+	padding-bottom: 100px;
+}
+#advice p{
+	color: white;
+}
+#advice .phone{
+	background-color: gray;
+	padding-left:50px;
+	padding-right:50px;
+	border-radius: 10px;
+}
+#advice .address{
+	background-color: gray;
+	padding-left:50px;
+	padding-right:50px;
+	border-radius: 10px;
+}
+#advice .email{
+	background-color: gray;
+	padding-left:50px;
+	padding-right:50px;
+	border-radius: 10px;
+}
+.phone img{
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 70px;
+	width: 70px;
+	padding-top:40px ;	
+}
+.address img{
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 70px;
+	width:70px;
+	padding-top:40px ;	
+}
+.email img{
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 70px;
+	width: 70px;
+	padding-top:40px ;
+}
+
+
+
+
+
+
+
+#invite {
+	color: white;
+	display: flex;
+	justify-content: center;
+	justify-content: space-evenly;
+	padding-bottom: 80px;
+}
+.invite-request{
+	padding: 50px;
+	background-color: #333;
+	border-radius: 5px;
+}
+.visit-time{
+	background-color: royalblue;
+	padding: 40px;
+	border-radius: 5px;
+}
+
+
+
+
+
+#map iframe{
+	padding-left: 10%;
+}
+
+
+
+
+
+
+#footer{
+	color: white;
+	display: flex;
+	justify-content: center;
+	justify-content: space-evenly;
+	padding-bottom: 70px;
+	padding-top: 50px;
+}
+#footer .visit-us img{
+	height: 50px;
+	width: 50px;
+	padding-right: 10px;
+}
+#footer .measure img{
+	height: 50px;
+	width: 50px;
+	padding-right: 10px;
+}
+#footer .schedule img{
+	height: 50px;
+	width: 50px;
+	padding-right: 10px;
+}
+.footer-link{
+	padding-top: 10%;
+}
+
+
+
+
+
+
+
+.last-footer{
+	display: flex;
+	justify-content: center;
+	justify-content: space-evenly;
+	color: white;
+	text-align: center;
+	border: 0.5px solid grey;
+	padding-top: 10px;
+}
+.last-footer .last-footer-link img{
+	padding-top: 10px;
+	height: 50px;
+	width: 50px;
+	
+}

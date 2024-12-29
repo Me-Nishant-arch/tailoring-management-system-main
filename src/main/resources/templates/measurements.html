@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<title>Measurements - Tailor Management System</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/CSS/measurementStyle.css}">
+</head>
+<body>
+
+
+
+ <header>
+        <div class="logo">
+			<img src=""th:src="@{/photos/tailor logo.png}"style="height:100px; width:190px;">
+		</div>
+        <nav>
+            <ul>
+				<li><a th:href="@{/home}">Home</a></li>
+                <li><a th:href="@{/aboutUs}">About Us</a></li>
+                <li><a th:href="@{/contact}">Contact</a></li>
+                <li><a th:href="@{/measurements}">Measurements</a></li>
+				<li style="padding-left: 70px;"><a th:href="@{/login}">Login /</a><a th:href="@{/register}"> Register</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    
+    
+    <section class="front-home-Div">
+        <h1>Every Size Matters</h1>
+        <p>Measure Your Worth !</p>
+		<a th:href="@{/contact}">Contact Us</a>
+    </section>
+    
+    
+    
+    
+   
+    <section class="measurement-guide">
+    <h1>Measurement Guide</h1>
+    <p>Selecting the perfect suit begins with accurate measurements. This guide is crafted to assist you in measuring yourself correctly, ensuring your custom suit fits impeccably. Whether it's for a formal occasion, a business meeting, or simply to look your best, these instructions will help you achieve a tailored fit.</p>
+    <p>Here's what you need to get started:</p>
+     <ol>
+     <li>A flexible measuring tape</li>
+     <li>A friend or family member to assist you (recommended for the best accuracy)</li>
+     <li>A notepad or digital device to write your measurements</li>
+    </ol>
+    </section>
+	
+	
+	
+	
+	<h1 class="above-chart-text" style="color:white; padding-top: 30px;">Tailor Measurement Chart</h1>
+	<section class="measurement-chart">
+	<div class="chart">
+	</div>
+	</section>
+	
+	
+	
+	
+	
+	<section class="each-measuring-step">
+	<div class="guide-wrapper">
+	<h1>Detailed Breakdown of Each Measuring Step</h1>
+	
+	
+	
+	<div class="first-row">	
+	  <div class="shoulder-pic"></div>
+	  <div class="shoulder-text">
+	    <h2>1. Shoulder</h2>
+	    <p>For shoulder width, stand upright with your shoulders relaxed while having someone measure from the tip of one shoulder to the tip of the other, straight across the back. Ensure the tape measure is level and straight.</p>
+	   
+	  </div>
+	  <div class="sleeve-pic"></div>
+	  <div class="sleeve-text">
+	    <h2>2. Sleeve</h2>
+	    <p>When measuring sleeve length, start at the outer edge of the shoulder and measure down to the wrist bone along the outside of the arm. Keeping the arm slightly bent will provide an accurate measurement.</p></div>
+	</div>
+	
+	
+	
+	<div class="second-row">
+	  <div class="chest-pic"></div>
+	  <div class="chest-text">
+	    <h2>3. Chest</h2>
+	    <p>To measure the full chest, wrap the tape measure around the fullest part of the chest, typically under the armpit across the nipples, making sure the tape measure is level and straight across the back. Keep the tape snug but not tight, allowing enough room to breathe. Ensure the tape is horizontal and arms are by the side; then take a normal breath and measure. Do not puff out your chest</p>
+	  </div>
+	  <div class="waist-pic"></div>
+	  <div class="waist-text">
+	    <h2>4. Waist</h2>
+	    <p>For the waist measurement, locate the narrowest part of the waist, usually above the belly button. Measure around this point, ensuring the tape measure is level and snug. Avoid sucking in the stomach to get an accurate measurement.</p></div>
+	</div>
+	
+	
+	
+	
+	<div class="third-row">
+	  <div class="hips-pic"></div>
+	  <div class="hips-text">
+	    <h2>5. Hips</h2>
+	    <p>To measure the hips, stand with feet together and measure around the fullest part of the hips and buttocks, ensuring the tape measure is level and not too tight</p>
+	  </div>
+	  <div class="frontChest-pic"></div>
+	  <div class="frontChest-text">
+	    <h2>6. Front Chest</h2>
+	    <p>The front chest measurement involves wrapping the tape measure around the chest from one armpit to the other, across the fullest part.</p></div>
+	</div>
+	
+	
+	
+	
+	<div class="fourth-row">
+	  <div class="backChest-pic"></div>
+	  <div class="backChest-text">
+	    <h2>7. Back Chest</h2>
+	    <p>For the back chest length measurement involves measuring from shoulder to shoulder across the back, making sure the tape measure follows the natural curve of the back.</p>
+	  </div>
+	  <div class="jacket-pic"></div>
+	  <div class="jacket-text">
+	    <h2>8. Jacket</h2>
+	    <p>For jacket length, start from the base of the neck and measure down to the desired length of the jacket, ensuring the tape measure is straight down the back.</p></div>
+	</div>
+	
+	
+	
+	<div class="fifth-row">
+	  <div class="pantsWaist-pic"></div>
+	  <div class="pantsWaist-text">
+	    <h2>9. Pants Waist</h2>
+	    <p>To determine the pants waist, measure around the natural waistline, typically just above the belly button. Keep the tape measure level and snug, avoiding sucking in the stomach. It is normal for this measurement to be bigger than anticipated; store-bought pants typically have size labels that are smaller than their true dimensions</p>
+	  </div>
+	  <div class="lowHip-pic"></div>
+	  <div class="lowHip-text">
+	    <h2>10. Low Hip</h2>
+	    <p>The measurement for low hip for pants is taken around the fullest part of the hips and buttocks, ensuring the tape measure is level and snug but not tight.</p></div>
+	</div>
+	
+	
+	<div class="sixth-row">
+	  <div class="thigh-pic"></div>
+	  <div class="thigh-text">
+	    <h2>11. Thigh</h2>
+	    <p>When measuring the thigh, measure around the fullest part of the thigh, keeping the tape measure level and snug but not tight.</p>
+	  </div>
+	  <div class="crotch-pic"></div>
+	  <div class="crotch-text">
+	    <h2>12. Crotch</h2>
+	    <p>The full crotch measurement involves measuring from the front waistline to the back waistline, passing the tape measure between the legs and ensuring it follows the natural curve.</p></div>
+	</div>
+	
+	
+	<div class="seventh-row">
+	  <div class="pantLength-pic"></div>
+	  <div class="pantLength-text">
+	    <h2>13. Pant Length</h2>
+	    <p>For pant length, measure from the waist to the bottom of the ankle on the outside of the leg while standing straight with feet slightly apart. Make sure the measurement tape is straight.</p>
+	  </div>
+	  <div class="bicep-pic"></div>
+	  <div class="bicep-text">
+	    <h2>14. Bicep</h2>
+	    <p>The bicep measurement is taken around the fullest part of the upper arm. Try to not put the tape too tight.</p></div>
+	</div>
+	
+	
+	<div class="eighth-row">
+	  <div class="neck-pic"></div>
+	  <div class="neck-text">
+	    <h2>15. Neck</h2>
+	    <p>To measure the neck, place the measuring tape around the base of the neck and add a slight allowance (about 1-2 cm) for comfort. It should be comfortably touching the skin</p>
+	  </div>
+	  <div class="cuffs-pic"></div>
+	  <div class="cuffs-text">
+	    <h2>16. Cuffs</h2>
+	    <p>Finally, the trouser - cuffs measurement is taken around the narrowest part of the ankle, make sure that it is not too tight.</p></div>
+	</div>
+	
+
+ 
+	</div>
+	</section>
+	
+	
+	
+	 <div id="map">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3415.2017670886326!2d83.46792817532085!3d27.628483476227828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39968432be835a0b%3A0x9050d582cdb10658!2sNepathya%20College!5e1!3m2!1sen!2snp!4v1734236529121!5m2!1sen!2snp"
+          width="80%" height="400px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </div>
+      
+      
+	
+	<footer class="footer">
+		<div class="footer-container">
+	       <div class="contact-us">
+	           <h2>CONTACT US NOW</h2>
+	           <p><img src=""th:src="@{/photos/miniFONTS/phoneICON.png}" style="height: 25px; width: 25px; border-radius: 50%;">  456-7890 / (987) 654-3210</p>
+	           <a href=""><img src=""th:src="@{/photos/miniFONTS/emailICON.jpg}" style="height: 25px; width: 25px; border-radius: 50%;">  info@Maharajas.com</a>
+	       </div>
+			   <div class="address">
+	           <p><img src=""th:src="@{/photos/miniFONTS/locationFONT.jpg}" style="height: 25px; width: 25px; border-radius: 50%;">  Hattisar, Kamalpokhari, Goodwill Finance Building, Kathmandu</p>
+			   </div>
+		</div>	
+	 </footer>
+	 
+	  
+	  
+	  
+	  <footer id="footer">
+		<div class="footer-flex">
+		<div class="getintouch">
+			<h1 style="color: goldenrod">Get In Touch!</h1>
+			<p>If you want to custom make your suits then we are here. Feel free to contact us.</p> 
+			<p>You will find various options with high quality making.</p>
+		</div>		
+		<div class="visit-us">					
+			<h1 style="color: gold; font-family: Georgia, 'Times New Roman', Times, serif;"><img src="" th:src="@{/photos/miniFONTS/locationFONT.jpg}">Visit Our Shop</h1>
+			<p style="padding-left: 60px;">Hattisar, Kamalpokhari, Goodwill Finance Building, Kathmandu</p>
+		</div>
+		<div class="measure">
+			<h3 style="color: gold; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"><img src="" th:src="@{/photos/miniFONTS/phoneICON.png}"height>Call Us</h3>
+			<p style="padding-left: 60px;">(123) 456-7890 / (987) 654-3210</p>
+		</div>
+		<div class="schedule">
+			<h3 style="color: gold; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"><img src="" th:src="@{/photos/miniFONTS/emailICON.jpg}">Email Us</h3>
+			<p style="padding-left: 60px;">info@Maharajas.com</p>
+		</div>
+		</div>
+		<div class="footer-link">
+			<h3 style="color: goldenrod; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Follow Us On Social Media</h3>
+			
+			<a href="https://www.instagram.com/empirecollectionnepal/"><img src="" th:src="@{/photos/miniFONTS/instaICON.jpg}"style="height:80px; width:90px; padding-right:10px;"></a>
+			
+			
+			<a href="https://www.facebook.com/Empirecollectionnepal/"><img src="" th:src="@{/photos/miniFONTS/facebookICON.png}"style="height:80px; width:80px;"></a>
+		</div>
+	  </footer>
+	  
+	  
+	  
+	 
+	 
+	   <div class="footer-text">
+		<p>All contents © copyright 1999-2020 Maharajas Tailors. All rights reserved.Unauthorized use, and/or duplication of this material without express and written permission from this websites author and/or owner is strictly prohibited.
+		   Excerpts and links may be used, provided that full and clear credit is given to Maharajas Tailors Singapore with appropriate and specific direction to the original content.</p>
+		 </div> 
+	
+    
+    
+</body>
+</html>

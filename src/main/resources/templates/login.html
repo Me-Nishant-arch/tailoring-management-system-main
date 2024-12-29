@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login Page - Tailor Management System</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/CSS/loginStyle.css}">
+</head>
+<body>
+    <div class="login-container">
+        <h1>Login</h1>
+
+        <!-- Error messages -->
+        <div th:if="${param.error}" class="error-message">
+            Invalid username or password!
+        </div>
+        <div th:if="${param.logout}" class="error-message" style="color: green;">
+            You have been logged out successfully.
+        </div>
+		<p th:if="${message != null}" th:text="${message}"> </p>
+
+        <!-- Login Form -->
+        <form th:action="@{/login}" method="post">
+            <div class="form-group">
+                <label for="username">Email</label>
+                <input type="text" id="username" name="username" placeholder="Enter your email" required />
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required />
+            </div>
+            <div class="form-group">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+<div class="form-group">Don't have an account ? <a th:href="@{/register}"> Register here</a>
+</div>
+</div>   
+</body>
+</html>

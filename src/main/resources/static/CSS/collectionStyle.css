@@ -1,0 +1,177 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+	background-color: white;
+	}
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+	font-size: 25px;
+	font-family: cursive;
+}
+nav ul li a:hover{
+	color: gold;
+}
+
+
+
+#homepage-pic{
+	background-image: url(/photos/collection-banner.jpg);
+	height: 350px;
+	width: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	color: white;
+	text-align: center;
+	padding-top: 250px;
+}
+#homepage-pic h2{
+	font-family: Montserrat;
+	font-size: 20px;
+}
+#homepage-pic h1{
+	font-family: lora;
+	font-style: italic;
+	font-size: 60px;
+}
+
+
+
+
+.accessories-wrapper{
+	display: flex;
+	padding-left:80px ;
+	padding-top: 50px;
+	background-color: black;
+}
+.accessories-wrapper .accessories-pic img{
+
+	height: 400px;
+	width: 320px;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.accessories-pic h2{
+	color: red;
+		font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+		margin-left: 8%;
+		margin-top:3%;
+}
+.accessories-description{
+	font-family: "PT Sans";
+	font-size: 20px;
+	margin-left: 100px;
+	margin-right: 50px;
+	padding-top: 50px;
+	color: white;
+	
+}
+
+
+
+
+
+
+.fabrics-wrapper{
+	display: flex;
+	padding-left: 80px;
+	padding-top:50px ;
+	background-color: black;
+} 
+ .fabrics-pic img{
+	
+	height: 400px;
+	width: 320px;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.fabrics-pic h2{
+	color: red;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	margin-left: 8%;
+	margin-top:3%;
+}
+.fabrics-description{
+	font-family: "PT Sans";
+	font-size: 20px;
+	margin-left: 100px;
+	margin-right: 50px;
+	padding-top: 50px;color: white;
+}
+.options {
+padding-top: 20px;
+}
+.options img{
+	padding-right: 5px;
+
+}
+
+
+
+
+
+
+
+.footer{
+	background-color: #333;
+}
+.footer-container{
+	color: white;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	justify-content: space-evenly;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.footer .contact-us h2{
+	font-size: 20px;
+}
+.footer .contact-us p{
+	font-size: 14px;
+	font-family: cursive;
+}
+.footer .contact-us a{
+	text-decoration: none;
+	color: crimson;
+	font-family: cursive;
+	padding-right: 32px;
+}
+.footer .contact-us a:hover{
+	color: blue;
+}
+.footer .address p{
+	font-family: cursive;
+}
+
+
+
+
+
+
+.footer-text{
+	padding-top:15px;
+	padding-bottom: 20px;
+	background-color: black;
+}
+.footer-text p{
+	color: white;
+}

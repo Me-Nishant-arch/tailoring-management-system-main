@@ -1,0 +1,230 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+	background-color: black;
+	}
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+	font-size: 25px;
+	font-family: cursive;
+}
+nav ul li a:hover{
+	color: gold;
+}
+
+
+
+
+
+#below-nav{
+	padding-top: 100px;
+	text-align: center;
+	font-size: 50px;
+	background-image: url(/photos/men-in-suit.jpg);
+	height:600px; 
+	width: 100%; 
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+#below-nav p{
+	font-size: 70px;
+	letter-spacing: 5px;
+	color: gold;
+	font-family: Lora;
+font-style: italic;
+}
+
+
+
+
+
+
+#about-us{
+	background-color: black;
+}
+#about-us h2{
+	color: red;
+	padding-top: 80px;
+	padding-left: 70px;
+}
+.aboutUS-wrapper{
+	display: flex;
+	justify-content: center;
+	padding-left: 60px;
+	padding-right: 60px;
+	padding-bottom: 50px;
+}
+.information-history p,
+.information-history2 p{
+	color: wheat;
+	padding: 10px;
+	font-size: 20px;
+font-family: "PT Sans";
+}
+.information-history h2{
+	color: red;
+	font-family:  Montserrat;
+}
+
+
+
+
+
+
+#experience{
+	background-color: red;
+}
+.tailor-experience{
+	display: flex;
+	}
+.just-a-pic{
+	background-image: url(/photos/men-suit.jpg);
+	height: 400px;
+	width: 200%;
+	background-size: cover;
+}
+.tailor-history{
+	padding-left: 50px;
+	padding-right: 30px;
+}
+.tailor-history p{
+	color: white;
+	font-family: PT Sans;
+	font-size: 20px;
+	line-height: 20px;
+}
+.tailor-history h2{
+	padding-top: 30px;
+	color: white;
+	font-family: Montserrat;
+	font-weight: 700;
+	font-size: 28px;
+	margin-top: 20px;
+}
+.tailor {
+    margin-bottom: 20px;
+}
+.tailor p {
+    line-height: 1.6;
+    color: #555;
+}
+
+
+
+
+
+
+
+
+#collection-container{
+	display:flex ;
+	background-color: black;
+	padding-top: 20px;
+	margin-bottom: 50px;
+}
+.collection-container-pic{
+	background-image: url('/photos/voucher.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position-x:50%;
+	background-position-y:50%;
+	height:300px;
+	width: 30%;
+	padding-right: 300px;
+}
+.collection-content{
+	padding: 20px;
+}
+.collection-content-text{
+	color: white;
+	padding: 20px;
+	margin-top: 60px;
+	border-radius: 10px;
+	font-size: larger;
+	background-color: darkgray;
+}
+.collection-content-text p{
+	font-family: 'Courier New', Courier, monospace;
+}
+
+
+
+
+
+
+
+
+
+
+
+.footer{
+	background-color: #333;
+}
+.footer-container{
+	color: white;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	justify-content: space-evenly;
+	padding-top: 50px;
+	padding-bottom: 30px;
+}
+.footer .contact-us h2{
+	font-size: 20px;
+	
+}
+.footer .contact-us p{
+	font-size: 14px;
+	font-family: cursive;
+}
+.footer .contact-us a{
+	text-decoration: none;
+	color: crimson;
+	font-family: cursive;
+	padding-right: 32px;
+}
+.footer .contact-us a:hover{
+	color: blue;
+}
+.footer .address p{
+	font-family: cursive;
+}
+
+
+
+
+
+
+
+
+.footer-text{
+	padding-top:15px;
+	padding-bottom: 20px;
+}
+.footer-text p{
+	background-color: black;
+	color: white;
+	font-size: 15px;
+	padding-left: 50px;
+	padding-right: 30px;
+}

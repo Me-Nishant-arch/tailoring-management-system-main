@@ -1,0 +1,445 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+	background-color: #7b2020;
+	}
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+	font-size: 25px;
+	font-family: cursive;
+}
+nav ul li a:hover{
+	color: gold;
+}
+
+
+
+
+
+
+
+.front-home-Div{
+	background-image: url("/photos/forMeasurements/measurements_banner.jpg");
+    height: 520px; 
+    width: 100%; 
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.front-home-Div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+	background-position: center;
+}
+.front-home-Div a {
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 10px;
+    color: red;
+    font-size:20px;
+	transition-property: padding;
+	transition-delay: 0.5ms;
+	transition: 200ms ease;
+}
+.front-home-Div a:hover{
+	background-color: #333;
+	color: gold;
+	padding: 25px;
+}
+.front-home-Div h1{
+	font-family: cursive;
+	font-size: 60px;
+	color: whitesmoke;
+}
+.front-home-Div p{
+	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-size: 30px;
+	color: white;
+}
+
+
+
+
+
+
+.measurement-guide{
+	color: white;
+}
+.measurement-guide h1{
+	color: aqua;
+	text-align: center;
+	font-family: lora, serif;
+	font-size: 40px
+}
+.measurement-guide p{
+	font-family: montserrat, sans-serif;
+	font-size: 20px;
+	color: fuchsia;
+	padding-left: 50px;
+	padding-right: 20px;
+}
+.measurement-guide ol {
+   list-style-type: disc; /* Ensures that dots appear as bullet points */
+   font-size: 20px;
+   font-family:  montserrat, sans-serif;
+   padding-left: 70px
+}
+    
+
+
+
+
+
+    
+.above-chart-text{
+	font-size: 50px;
+	text-align: center;
+}
+.measurement-chart{
+	background-image: url(/photos/forMeasurements/measurement-chart.png);
+	height:700px;
+	width:70%;
+	background-repeat: no-repeat;
+	background-position:center;
+	background-size: contain;
+	padding-left: 30%;
+}
+
+
+
+
+
+
+.each-measuring-step h1{
+	font-size:40px;
+	text-align: center;
+}
+
+
+
+
+
+
+
+.guide-wrapper{
+	color: white;
+}
+/* First Row */
+.first-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  /* Four columns */
+    justify-items: center;  /* Horizontally centers the images */
+    align-items: center;  /* Vertically centers the images */
+    gap: 20px;  /* Adds space between images */
+}
+
+.first-row .shoulder-pic {
+    background-image: url("/photos/forMeasurements/shoulder.png");
+    height: 300px;
+    width: 300px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.first-row .sleeve-pic {
+    background-image: url("/photos/forMeasurements/sleeve.png");
+    height: 300px;
+    width: 300px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+/* Second Row */
+.second-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  /* Four columns */
+    justify-items: center;  /* Horizontally centers the images */
+    align-items: center;  /* Vertically centers the images */
+    gap: 20px;  /* Adds space between images */
+    padding-top: 80px
+}
+
+.second-row .chest-pic {
+    background-image: url("/photos/forMeasurements/chest.png");
+    height: 300px;
+    width: 300px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.second-row .waist-pic {
+    background-image: url("/photos/forMeasurements/waist.png");
+    height: 300px;
+    width: 300px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+/* Third Row */
+.third-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  /* Four columns */
+    justify-items: center;  /* Horizontally centers the images */
+    align-items: center;  /* Vertically centers the images */
+    gap: 20px;  /* Adds space between images */
+     padding-top: 80px
+}
+
+.third-row .hips-pic {
+    background-image: url("/photos/forMeasurements/hips.png");
+    height: 300px;
+    width: 300px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.third-row .frontChest-pic {
+    background-image: url("/photos/forMeasurements/front-chest.png");
+    height: 300px;
+    width: 300px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+/* Fourth Row */
+.fourth-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  /* Four columns */
+    justify-items: center;  /* Horizontally centers the images */
+    align-items: center;  /* Vertically centers the images */
+    gap: 20px;  /* Adds space between images */
+     padding-top: 80px
+}
+
+.fourth-row .backChest-pic {
+    background-image: url("/photos/forMeasurements/back-chest.png");
+    height: 300px;
+    width: 300px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.fourth-row .jacket-pic {
+    background-image: url("/photos/forMeasurements/jacket.png");
+    height: 300px;
+    width: 300px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+/* Fifth Row */
+.fifth-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  /* Four columns */
+    justify-items: center;  /* Horizontally centers the images */
+    align-items: center;  /* Vertically centers the images */
+    gap: 20px;  /* Adds space between images */
+     padding-top: 80px
+}
+
+.fifth-row .pantsWaist-pic {
+    background-image: url("/photos/forMeasurements/pants-waist.png");
+    height: 300px;
+    width: 300px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.fifth-row .lowHip-pic {
+    background-image: url("/photos/forMeasurements/low-hip.png");
+    height: 300px;
+    width: 300px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+/* Sixth Row */
+.sixth-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  /* Four columns */
+    justify-items: center;  /* Horizontally centers the images */
+    align-items: center;  /* Vertically centers the images */
+    gap: 20px;  /* Adds space between images */
+     padding-top: 80px
+}
+
+.sixth-row .thigh-pic {
+    background-image: url("/photos/forMeasurements/thigh.png");
+    height: 300px;
+    width: 300px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.sixth-row .crotch-pic {
+    background-image: url("/photos/forMeasurements/crotch.png");
+    height: 300px;
+    width: 300px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+/* Seventh Row */
+.seventh-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  /* Four columns */
+    justify-items: center;  /* Horizontally centers the images */
+    align-items: center;  /* Vertically centers the images */
+    gap: 20px;  /* Adds space between images */
+     padding-top: 80px
+}
+
+.seventh-row .pantLength-pic {
+    background-image: url("/photos/forMeasurements/panth-length.png");
+    height: 300px;
+    width: 300px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.seventh-row .bicep-pic {
+    background-image: url("/photos/forMeasurements/bicep.png");
+    height: 300px;
+    width: 300px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+/* Eighth Row */
+.eighth-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  /* Four columns */
+    justify-items: center;  /* Horizontally centers the images */
+    align-items: center;  /* Vertically centers the images */
+    gap: 20px;  /* Adds space between images */
+     padding-top: 80px
+}
+
+.eighth-row .neck-pic {
+    background-image: url("/photos/forMeasurements/neck.png");
+    height: 300px;
+    width: 300px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.eighth-row .cuffs-pic {
+    background-image: url("/photos/forMeasurements/cuffs.png");
+    height: 300px;
+    width: 300px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+
+
+
+#map iframe{
+	padding-left: 10%;
+	padding-top: 60px;
+	padding-bottom: 60px
+}
+
+
+
+.footer{
+	background-color: #333;
+}
+.footer-container{
+	color: white;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	justify-content: space-evenly;
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+.footer .contact-us h2{
+	font-size: 20px;
+}
+.footer .contact-us p{
+	font-size: 14px;
+	font-family: cursive;
+}
+.footer .contact-us a{
+	text-decoration: none;
+	color: crimson;
+	font-family: cursive;
+	padding-right: 32px;
+}
+.footer .contact-us a:hover{
+	color: blue;
+}
+.footer .address p{
+	font-family: cursive;
+}
+
+
+
+
+
+#footer{
+	color: white;
+	display: flex;
+	justify-content: center;
+	justify-content: space-evenly;
+	padding-bottom: 70px;
+	padding-top: 50px;
+}
+#footer .visit-us img{
+	height: 50px;
+	width: 50px;
+	padding-right: 10px;
+}
+#footer .measure img{
+	height: 50px;
+	width: 50px;
+	padding-right: 10px;
+}
+#footer .schedule img{
+	height: 50px;
+	width: 50px;
+	padding-right: 10px;
+}
+.footer-link{
+	padding-top: 10%;
+}
+
+
+
+
+.footer-text{
+	padding-top:15px;
+	padding-bottom: 20px;
+}
+.footer-text p{
+	background-color: black;
+	color: white;
+}

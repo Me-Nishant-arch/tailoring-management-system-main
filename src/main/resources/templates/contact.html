@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us - Tailor Management System</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/CSS/contactStyle.css}">
+</head>
+<body>
+	
+	
+
+    <header>
+        <div class="logo">
+			<img src=""th:src="@{/photos/tailor logo.png}"style="height:100px; width:190px;">
+		</div>
+        <nav>
+            <ul>
+				<li><a th:href="@{/home}">Home</a></li>
+                <li><a th:href="@{/aboutUs}">About Us</a></li>
+                <li><a th:href="@{/contact}">Contact</a></li>
+                <li><a th:href="@{/measurements}">Measurements</a></li>
+				<li style="padding-left: 70px;"><a th:href="@{/login}">Login /</a><a th:href="@{/register}"> Register</a></li>
+            </ul>
+        </nav>
+    </header>
+		
+		
+		
+		
+		
+		<section id="front-home">
+			<div class="appointment">
+				<h1>Have Questions? We </h1>
+					<h1>Have Answers</h1>
+				<H2>Contact Us Or Book An Appointment Online</H2>
+				<a th:href="@{/appointments}">MAKE AN APPOINTMENT</a>
+			</div>
+			<div class="appointment-pic">
+				<img src="" th:src="@{/photos/miniFONTS/ready-in-suit.jpg}">
+			</div>
+		</section>
+		
+		
+		
+		
+		
+		<section id="advice">
+			<div class="phone">
+				<img src="" th:src="@{/photos/miniFONTS/phoneICON.png}">
+				<p style="color: gold; font-family: 'Courier New', Courier, monospace;">Call us</p>
+				<p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">(123) 456-7890, (987) 654-3210</p>
+			</div>
+			
+			<div class="address">
+				<img src="" th:src="@{/photos/miniFONTS/locationFONT.jpg}">
+				<p style="color: gold; font-family: 'Courier New', Courier, monospace;">Visit Us</p>
+				<p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Hattisar, Kamalpokhari,</p> 
+				<p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;">Goodwill Finance Building, Kathmandu</p>
+			</div>
+			<div class="email">
+				<img src="" th:src="@{/photos/miniFONTS/emailICON.jpg}">
+				<p style="color: gold; font-family: 'Courier New', Courier, monospace;">Email Us</p>
+				<p style="font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;"> info@Maharajas.com</p>
+			</div>
+		</section>
+		
+		
+		
+		
+		
+		
+		<section id="invite">
+			<div class="invite-request">
+				<div class="visit-us">
+					<h1 style="color: goldenrod; font-family: Georgia, 'Times New Roman', Times, serif;">Come Visit Us</h1>
+					<p>To view our fabric selections, discuss style options, and examine sample suits, please visit us or</p>
+				    <p>make an appointment. You can visit us any time during our opening hours to order your custom made suits.</p>
+				</div>
+				<div class="measure">
+					<h3 style="color: gold; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Get Measured</h3>
+					<p>Visit us for measurement of your perfectly fit suit</p>
+				</div>
+				<div class="schedule">
+					<h3 style="color: gold; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Schedule a Try-On</h3>
+					<p>Fix an appointment with us in order to schedule a try-on.</p>
+				</div>
+			</div>
+			
+			
+			<div class="visit-time">
+				<h2 style="color: goldenrod; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Showroom Hours</h2>
+				<p>Sunday     -    10AM to 7PM</p>
+				<p>Monday     -    10AM to 7PM</p>
+				<p>Tuesday     -    10AM to 7PM</p>
+				<p>Wednesday    -     10AM to 7PM</p>
+				<p>Thursday     -    10AM to 7PM</p>
+				<p>Friday     -    10AM to 7PM</p>
+				<p>Saturday     -    HOLIDAY</p>
+			</div>
+		</section>
+		
+		
+		
+		
+
+      <div id="map">
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3415.2017670886326!2d83.46792817532085!3d27.628483476227828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39968432be835a0b%3A0x9050d582cdb10658!2sNepathya%20College!5e1!3m2!1sen!2snp!4v1734236529121!5m2!1sen!2snp"
+          width="80%" height="400px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </div>
+	  
+	  
+	  
+	  
+	  
+	  <footer id="footer">
+		<div class="footer-flex">
+		<div class="getintouch">
+			<h1 style="color: goldenrod">Get In Touch!</h1>
+			<p>If you want to custom make your suits then we are here. Feel free to contact us.</p> 
+			<p>You will find various options with high quality making.</p>
+		</div>		
+		<div class="visit-us">					
+			<h1 style="color: gold; font-family: Georgia, 'Times New Roman', Times, serif;"><img src="" th:src="@{/photos/miniFONTS/locationFONT.jpg}">Visit Our Shop</h1>
+			<p style="padding-left: 60px;">Hattisar, Kamalpokhari, Goodwill Finance Building, Kathmandu</p>
+		</div>
+		<div class="measure">
+			<h3 style="color: gold; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"><img src="" th:src="@{/photos/miniFONTS/phoneICON.png}"height>Call Us</h3>
+			<p style="padding-left: 60px;">(123) 456-7890 / (987) 654-3210</p>
+		</div>
+		<div class="schedule">
+			<h3 style="color: gold; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;"><img src="" th:src="@{/photos/miniFONTS/emailICON.jpg}">Email Us</h3>
+			<p style="padding-left: 60px;">info@Maharajas.com</p>
+		</div>
+		</div>
+		<div class="footer-link">
+			<h3 style="color: goldenrod; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Follow Us On Social Media</h3>
+			
+			<a href="https://www.instagram.com/empirecollectionnepal/"><img src="" th:src="@{/photos/miniFONTS/instaICON.jpg}"style="height:80px; width:90px; padding-right:10px;"></a>
+			
+			
+			<a href="https://www.facebook.com/Empirecollectionnepal/"><img src="" th:src="@{/photos/miniFONTS/facebookICON.png}"style="height:80px; width:80px;"></a>
+		</div>
+	  </footer>
+	  
+	  
+	  
+	  
+	  
+	  
+	  <div class="last-footer">
+		<div class="last-footer-text">
+		<h2 style="font-family: 'Courier New', Courier, monospace;">Maharaja's Collection | All Rights Reserved 2024</h2>
+		</div>
+		
+		<div class="last-footer-link">
+			<a href="https://www.facebook.com/Empirecollectionnepal/"><img src="" th:src="@{/photos/miniFONTS/facebookICON.png}"></a>
+		</div>
+	 </div>
+</body>
+</html>

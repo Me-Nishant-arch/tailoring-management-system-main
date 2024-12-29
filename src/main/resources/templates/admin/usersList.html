@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+   <title>Admin Home User List - Tailor Management System</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/CSS/adminCSS/usersList.css}">
+</head>
+<body>
+
+
+    <header>
+        <div class="logo">
+			<img src=""th:src="@{/photos/tailor logo.png}"style="height:100px; width:190px;">
+		</div>
+        <nav>
+            <ul>
+				<li><a th:href="@{/adminHome}">Home</a></li>
+                <li><a th:href="@{/adminHome/users}">Users</a></li>
+                <li><a th:href="@{/adminHome/orders}">Orders</a></li>
+                <li><a th:href="@{/adminHome/appointments}">Appointments</a></li>
+				<li style="padding-left: 70px;"><a th:href="@{/login}">Login /</a><a th:href="@{/register}"> Register</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    
+    
+    <h1>List of Users</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Password</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Iterate over the users list -->
+            <tr th:each="user : ${users}">
+                <td th:text="${user.id}"></td>
+                <td th:text="${user.firstName}"></td>
+                <td th:text="${user.lastName}"></td>
+                <td th:text="${user.email}"></td>
+                <td th:text="${user.password}"></td>
+                <td>
+                  
+                  <a th:href="@{/adminHome/users/delete/{id}(id=${user.id})}" class="btn-delete">Delete</a>
+                  
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

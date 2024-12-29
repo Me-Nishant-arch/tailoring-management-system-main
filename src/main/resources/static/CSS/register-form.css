@@ -1,0 +1,119 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light background color */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    box-sizing: border-box;
+}
+
+/* Container for the form */
+.maincontainer {
+    background-color: #fff; /* White background for the form */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 100%;
+    max-width: 400px; /* Fixed width for the form */
+    box-sizing: border-box;
+}
+
+/* Title and subtitle styling */
+.headtitle {
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px; /* Space below the title */
+}
+
+h2 {
+    color: #333; /* Dark text color */
+    font-size: 24px; /* Adjust font size */
+    margin: 0; /* Remove default margin */
+}
+
+h4 {
+    color: #555; /* Slightly lighter text color */
+    font-size: 16px; /* Slightly smaller font size */
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 15px; /* Space between form elements */
+}
+
+label {
+    display: block; /* Block display for labels */
+    margin-bottom: 5px; /* Space below labels */
+    color: #555; /* Slightly lighter text color */
+    font-size: 14px; /* Smaller font size for labels */
+}
+
+/* Styling for form input fields */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%; /* Full width inputs */
+    padding: 10px; /* Padding inside inputs */
+    border: 1px solid #ccc; /* Light border */
+    border-radius: 4px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding and border in width */
+    font-size: 14px; /* Slightly smaller font size for inputs */
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #007bff; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Button styling */
+button {
+    width: 100%; /* Full width button */
+    padding: 10px; /* Padding inside button */
+    background-color: #007bff; /* Primary button color */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Error message styling */
+.error {
+    color: #d9534f; /* Red color for error messages */
+    font-size: 12px; /* Smaller font size for error messages */
+    margin-top: 5px; /* Space above error messages */
+}
+
+/* Link styling */
+.form-group a {
+    color: #007bff; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.form-group a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 480px) {
+    .maincontainer {
+        width: 90%; /* Adjust form width for smaller screens */
+    }
+
+    h2 {
+        font-size: 20px; /* Adjust heading size */
+    }
+
+    h4 {
+        font-size: 14px; /* Adjust subtitle size */
+    }
+}
