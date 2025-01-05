@@ -36,7 +36,9 @@ public class AppointmentService {
         List<Appointment> appointments = appointmentRepository.findByEmail(email);
         return !appointments.isEmpty();  // If any appointments are found, the email exists
     }
-    
+    public boolean isPhoneNumberAlreadyExists(String phoneNumber) {
+        return appointmentRepository.existsByPhoneNumber(phoneNumber);
+    }
 
     // Method to delete Appointment
     public void deleteAppointment(Long id) {

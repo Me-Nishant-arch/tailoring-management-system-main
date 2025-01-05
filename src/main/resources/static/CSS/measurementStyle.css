@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-	background-color: #7b2020;
+	background-color: black;
 	}
 header {
     background: #333;
@@ -81,11 +81,9 @@ nav ul li a:hover{
 
 
 
-.measurement-guide{
-	color: white;
-}
+
 .measurement-guide h1{
-	color: aqua;
+	color: silver;
 	text-align: center;
 	font-family: lora, serif;
 	font-size: 40px
@@ -93,13 +91,14 @@ nav ul li a:hover{
 .measurement-guide p{
 	font-family: montserrat, sans-serif;
 	font-size: 20px;
-	color: fuchsia;
+	color: white;
 	padding-left: 50px;
 	padding-right: 20px;
 }
 .measurement-guide ol {
    list-style-type: disc; /* Ensures that dots appear as bullet points */
    font-size: 20px;
+   color: white;
    font-family:  montserrat, sans-serif;
    padding-left: 70px
 }
@@ -121,7 +120,10 @@ nav ul li a:hover{
 	background-repeat: no-repeat;
 	background-position:center;
 	background-size: contain;
-	padding-left: 30%;
+	background-color: gray;
+	margin-left: 250px;
+	padding-top: 50px;
+	padding-bottom: 50px;
 }
 
 
@@ -363,9 +365,16 @@ nav ul li a:hover{
 
 #map iframe{
 	padding-left: 10%;
-	padding-top: 60px;
+	padding-top: 20px;
 	padding-bottom: 60px
 }
+
+
+
+
+
+
+
 
 
 

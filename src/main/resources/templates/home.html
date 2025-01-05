@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,9 +28,9 @@
 	
 	
     <section class="front-home-Div">
-        <h1>Welcome to Our Tailor Shop</h1>
-        <p>Your style, our expertise.</p>
-		<a href="">SHOP NOW</a>
+        <h1>Welcome to Maharaja</h1>
+        <p>Making the best clothes every day.</p>
+		<a th:href="@{/shop}">SHOP NOW</a>
     </section>
 	
 	

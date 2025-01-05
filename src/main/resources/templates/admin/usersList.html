@@ -23,8 +23,7 @@
         </nav>
     </header>
     
-    
-    
+
     <h1>List of Users</h1>
     <table>
         <thead>
@@ -32,6 +31,7 @@
                 <th>ID</th>
                 <th>First Name</th>
                 <th>Last Name</th>
+                <th>User Name</th>
                 <th>Email</th>
                 <th>Password</th>
             </tr>
@@ -42,13 +42,12 @@
                 <td th:text="${user.id}"></td>
                 <td th:text="${user.firstName}"></td>
                 <td th:text="${user.lastName}"></td>
+                <td th:text="${user.username}"></td>
                 <td th:text="${user.email}"></td>
                 <td th:text="${user.password}"></td>
-                <td>
-                  
-                  <a th:href="@{/adminHome/users/delete/{id}(id=${user.id})}" class="btn-delete">Delete</a>
-                  
-                </td>
+                <td>  
+                <a th:href="@{/adminHome/users/delete/{id}(id=${user.id})}" class="btn-delete">Delete</a> 
+               </td>
             </tr>
         </tbody>
     </table>

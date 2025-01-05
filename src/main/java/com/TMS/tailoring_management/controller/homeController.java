@@ -12,16 +12,19 @@ import org.springframework.web.bind.annotation.PostMapping;
 import com.TMS.tailoring_management.model.Appointment;
 import com.TMS.tailoring_management.model.Measurements;
 import com.TMS.tailoring_management.service.AppointmentService;
-import com.TMS.tailoring_management.service.CustomerService;
+import com.TMS.tailoring_management.service.MeasurementsService;
+;
 
 @Controller
 public class homeController {
 	
-	@Autowired
-	CustomerService customerService;
+	
 	
 	@Autowired
 	private AppointmentService appointmentService;
+	
+	@Autowired
+	private MeasurementsService measurementsService;
 	
 	
 	
@@ -47,16 +50,32 @@ public class homeController {
     public String getCollection() {
     	return "collection";
     }
-    
-    
+    @GetMapping("/shop")
+    public String getShop() {
+    	return "shop";
+    }
     
     @GetMapping("/measurements")
-    public String getMeasurementsPage(Model model) {
-    	model.addAttribute("measure",new Measurements());
-    	return "measurements";
+    public String showMeasurementPage(Model model) {
+        // Create a new Measurements object and add it to the model
+        model.addAttribute("measurements", new Measurements());
+        return "measurements"; // this is your HTML form
     }
-  
-    
+
+    @GetMapping("/submitMeasurements")
+    public String getMeasurementsFormPage(){
+    	return "measurements-form";
+    }
+    @PostMapping("/submitMeasurements")
+    public String submitMeasurements(@ModelAttribute Measurements measurements) {
+        // Save the measurements
+        measurementsService.save(measurements);
+        return "redirect:/confirmation"; // Redirect to a confirmation page or success page
+    }
+    @GetMapping("/confirmation")
+    public String getConformationPage(){
+    	return "confirmation";
+    }
     
     
     
@@ -69,27 +88,33 @@ public class homeController {
     
     @PostMapping("/appointments")
     public String postAppointmentForm(@ModelAttribute("appointment") Appointment appointment, BindingResult result, Model model) {
-        // Check if the email already exists before processing the form
+       
+    	// Check if the email already exists before processing the form
         if (appointmentService.isEmailAlreadyExists(appointment.getEmail())) {
             result.rejectValue("email", "error.email", "An appointment with this email already exists.");
         }
 
+        // Check if the phone number already exists
+        if (appointmentService.isPhoneNumberAlreadyExists(appointment.getPhoneNumber())) {
+            result.rejectValue("phoneNumber", "error.phoneNumber", "An appointment with this phone number already exists.");
+        }
+        
         // If there are validation errors, return to the form with error messages
         if (result.hasErrors()) {
             model.addAttribute("org.springframework.validation.BindingResult.appointment", result);
-            return "appointment-form";  // Stay on the form if there are validation errors
+            return "appointment-form"; // Stay on the form if there are validation errors
+        }
+        try {
+            appointmentService.saveAppointment(appointment); // Save the appointment to the database
+            model.addAttribute("message", "Appointment successfully made! Please return to home");
+        } catch (Exception e) {
+            e.printStackTrace(); // Log the error to the console
+            model.addAttribute("error", "Failed to make appointment. Please try again.");
         }
 
-        try {
-            appointmentService.saveAppointment(appointment);  // Save the appointment to the database
-            model.addAttribute("message", "Appointment successfully made!");
-            return "redirect:/home";  // Redirect to the home page after successful appointment
-        } catch (Exception e) {
-            e.printStackTrace();  // Log the error to the console
-            model.addAttribute("error", "Failed to make appointment. Please try again.");
-            return "appointment-form";  // Stay on the appointment form if there's an error
-        }
+        return "appointment-form"; // Stay on the appointment form to display the success/error message
     }
+
 
 }
 

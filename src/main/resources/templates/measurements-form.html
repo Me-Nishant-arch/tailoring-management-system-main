@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Provide Your Measurements - Tailor Management System</title>
+    <link rel="stylesheet" th:href="@{/CSS/measurements-form.css}">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="" th:src="@{/photos/tailor logo.png}" style="height:100px; width:190px;">
+        </div>
+        <nav>
+            <ul>
+                <li><a th:href="@{/home}">Home</a></li>
+                <li><a th:href="@{/aboutUs}">About Us</a></li>
+                <li><a th:href="@{/contact}">Contact</a></li>
+                <li><a th:href="@{/measurements}">Measurements</a></li>
+                <li style="padding-left: 70px;"><a th:href="@{/login}">Login /</a><a th:href="@{/register}"> Register</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<section class="measurement-form-section">
+    <h1>Provide Your Measurements</h1>
+    <p>Fill out the following details to help us create your custom suit with the perfect fit. Each measurement is crucial for ensuring the best tailored experience.</p>
+
+    <form action="/submitMeasurements" method="POST" th:action="@{/submitMeasurements}">
+    
+        <div class="measurement-grid">
+            <!-- Shoulder -->
+            <div class="measurement-field">
+                <img src="/photos/forMeasurements/shoulder.png" alt="Shoulder Image" style="height: 280px; width: 280px;">
+                <label for="shoulder">Shoulder</label>
+                <input type="text" id="shoulder" name="shoulder" placeholder="Enter shoulder width in cm" required>
+            </div>
+
+            <!-- Sleeve -->
+            <div class="measurement-field">
+                <img src="/photos/forMeasurements/sleeve.png" alt="Sleeve Image" style="height: 280px; width: 280px;">
+                <label for="sleeve">Sleeve</label>
+                <input type="text" id="sleeve" name="sleeve" placeholder="Enter sleeve length in cm" required>
+            </div>
+
+            <!-- Chest -->
+            <div class="measurement-field">
+                <img src="/photos/forMeasurements/chest.png" alt="Chest Image" style="height: 280px; width: 280px;">
+                <label for="chest">Chest</label>
+                <input type="text" id="chest" name="chest" placeholder="Enter chest circumference in cm" required>
+            </div>
+
+            <!-- Waist -->
+            <div class="measurement-field">
+                <img src="/photos/forMeasurements/waist.png" alt="Waist Image" style="height: 280px; width: 280px;">
+                <label for="waist">Waist</label>
+                <input type="text" id="waist" name="waist" placeholder="Enter waist circumference in cm" required>
+            </div>
+
+            <!-- Hips -->
+            <div class="measurement-field">
+                <img src="/photos/forMeasurements/hips.png" alt="Hips Image" style="height: 280px; width: 280px;">
+                <label for="hips">Hips</label>
+                <input type="text" id="hips" name="hips" placeholder="Enter hips circumference in cm" required>
+            </div>
+
+            <!-- Front Chest -->
+            <div class="measurement-field">
+                <img src="/photos/forMeasurements/front-chest.png" alt="Front Chest Image" style="height: 280px; width: 280px;">
+                <label for="frontChest">Front Chest</label>
+                <input type="text" id="frontChest" name="frontChest" placeholder="Enter front chest measurement in cm" required>
+            </div>
+
+            <!-- Back Chest -->
+            <div class="measurement-field">
+                <img src="/photos/forMeasurements/back-chest.png" alt="Back Chest Image" style="height: 280px; width: 280px;">
+                <label for="backChest">Back Chest</label>
+                <input type="text" id="backChest" name="backChest" placeholder="Enter back chest measurement in cm" required>
+            </div>
+
+            <!-- Jacket Length -->
+            <div class="measurement-field">
+                <img src="/photos/forMeasurements/jacket.png" alt="Jacket Length Image" style="height: 280px; width: 280px;">
+                <label for="jacket">Jacket Length</label>
+                <input type="text" id="jacket" name="jacket" placeholder="Enter jacket length in cm" required>
+            </div>
+
+            <!-- Pants Waist -->
+            <div class="measurement-field">
+                <img src="/photos/forMeasurements/pants-waist.png" alt="Pants Waist Image" style="height: 280px; width: 280px;">
+                <label for="pantsWaist">Pants Waist</label>
+                <input type="text" id="pantsWaist" name="pantsWaist" placeholder="Enter pants waist measurement in cm" required>
+            </div>
+
+            <!-- Low Hip -->
+            <div class="measurement-field">
+                <img src="/photos/forMeasurements/low-hip.png" alt="Low Hip Image" style="height: 280px; width: 280px;">
+                <label for="lowHip">Low Hip</label>
+                <input type="text" id="lowHip" name="lowHip" placeholder="Enter low hip measurement in cm" required>
+            </div>
+
+            <!-- Thigh -->
+            <div class="measurement-field">
+                <img src="/photos/forMeasurements/thigh.png" alt="Thigh Image" style="height: 280px; width: 280px;">
+                <label for="thigh">Thigh</label>
+                <input type="text" id="thigh" name="thigh" placeholder="Enter thigh circumference in cm" required>
+            </div>
+
+            <!-- Crotch -->
+            <div class="measurement-field">
+                <img src="/photos/forMeasurements/crotch.png" alt="Crotch Image" style="height: 280px; width: 280px;">
+                <label for="crotch">Crotch</label>
+                <input type="text" id="crotch" name="crotch" placeholder="Enter crotch measurement in cm" required>
+            </div>
+
+            <!-- Pant Length -->
+            <div class="measurement-field">
+                <img src="/photos/forMeasurements/panth-length.png" alt="Pant Length Image" style="height: 280px; width: 280px;">
+                <label for="pantLength">Pant Length</label>
+                <input type="text" id="pantLength" name="pantLength" placeholder="Enter pant length in cm" required>
+            </div>
+
+            <!-- Bicep -->
+            <div class="measurement-field">
+                <img src="/photos/forMeasurements/bicep.png" alt="Bicep Image" style="height: 280px; width: 280px;">
+                <label for="bicep">Bicep</label>
+                <input type="text" id="bicep" name="bicep" placeholder="Enter bicep circumference in cm" required>
+            </div>
+
+            <!-- Neck -->
+            <div class="measurement-field">
+                <img src="/photos/forMeasurements/neck.png" alt="Neck Image" style="height: 280px; width: 280px;">
+                <label for="neck">Neck</label>
+                <input type="text" id="neck" name="neck" placeholder="Enter neck measurement in cm" required>
+            </div>
+
+            <!-- Cuffs -->
+            <div class="measurement-field">
+                <img src="/photos/forMeasurements/cuffs.png" alt="Cuffs Image" style="height: 280px; width: 280px;">
+                <label for="cuffs">Cuffs</label>
+                <input type="text" id="cuffs" name="cuffs" placeholder="Enter cuff measurement in cm" required>
+            </div>
+        </div>
+
+        <button type="submit">Submit Measurements</button>
+    </form>
+</section>
+
+
+
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="contact-us">
+            <h2>Contact Us Now</h2>
+            <p><img src="" th:src="@{/photos/miniFONTS/phoneICON.png}" style="height: 25px; width: 25px; border-radius: 50%;"> 456-7890 / (987) 654-3210</p>
+            <a href=""><img src="" th:src="@{/photos/miniFONTS/emailICON.jpg}" style="height: 25px; width: 25px; border-radius: 50%;">  info@Maharajas.com</a>
+        </div>
+        <div class="address">
+            <p><img src="" th:src="@{/photos/miniFONTS/locationFONT.jpg}" style="height: 25px; width: 25px; border-radius: 50%;"> Hattisar, Kamalpokhari, Goodwill Finance Building, Kathmandu</p>
+        </div>
+    </div>
+</footer>
+
+
+
+</body>
+</html>

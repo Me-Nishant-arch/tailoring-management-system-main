@@ -12,7 +12,7 @@ public class Measurements {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;  // Unique ID for each set of measurements
-
+    
     @Column(name="Shoulder_Size",nullable = true)
     private Double shoulder;
 

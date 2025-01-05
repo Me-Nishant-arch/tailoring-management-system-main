@@ -17,20 +17,19 @@ public class SecurityConfig {
 	@Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         http
-            .authorizeHttpRequests(auth -> auth
-                .requestMatchers("/","/home", "/login", "/register","/contact","/aboutUs","/collection", "/CSS/**", "/JS/**", "/photosS/**").permitAll()
-                .anyRequest().authenticated() // All other pages require authentication
+        .authorizeHttpRequests(auth -> auth
+                .requestMatchers("/", "/home", "/login", "/register", "/CSS/**", "/JS/**").permitAll()
+                .anyRequest().authenticated()
             )
             .formLogin(form -> form
                 .loginPage("/login")
+                .loginProcessingUrl("/login")
                 .defaultSuccessUrl("/home", true)
+                .failureUrl("/login?error=true")
                 .permitAll()
             )
             .logout(logout -> logout
-                .logoutUrl("/logout")
-                .logoutSuccessUrl("/login?logout")
-                .invalidateHttpSession(true)
-                .deleteCookies("JSESSIONID", "remember-me")
+                .logoutSuccessUrl("/login?logout=true")
                 .permitAll()
             )
             .rememberMe(rememberMe -> rememberMe

@@ -9,66 +9,61 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.TMS.tailoring_management.model.Customer;
-import com.TMS.tailoring_management.security.SecurityConfig;
-import com.TMS.tailoring_management.service.CustomerService;
+import com.TMS.tailoring_management.model.Users;
+import com.TMS.tailoring_management.service.UsersService;
 
 import jakarta.validation.Valid;
 
 @Controller
 public class RegisterController {
-	
-	
+
     @Autowired
-    private CustomerService customerService;
- 
+    private UsersService usersService;
+
     @GetMapping("/register")
     public String getRegister(Model model) {
-        // If model doesn't already contain customer, add it
-        if (!model.containsAttribute("customer")) {
-            model.addAttribute("customer", new Customer());
+        if (!model.containsAttribute("users")) {
+            model.addAttribute("users", new Users());
         }
         return "register-form";
     }
-   
-    
+
     @PostMapping("/register")
-    public String postRegisterForm(@Valid @ModelAttribute("customer") Customer saveCustomer, 
+    public String postRegisterForm(@Valid @ModelAttribute("users") Users saveUsers, 
                                    BindingResult result, 
                                    Model model,
                                    RedirectAttributes redirectAttributes) {
-        // Check for standard validation errors
+
+        // Validate form fields
         if (result.hasErrors()) {
-            // Add the binding result to the model so error messages can be displayed
-            model.addAttribute("org.springframework.validation.BindingResult.customer", result);
+            model.addAttribute("org.springframework.validation.BindingResult.users", result);
             return "register-form";
         }
 
-        // Custom password matching validation
-        if (!saveCustomer.isPasswordMatching()) {
+        // Validate password confirmation
+        if (!saveUsers.isPasswordMatching()) {
             result.rejectValue("confirmPassword", "error.customer", "Passwords do not match");
             return "register-form";
         }
 
-        // Check if email already exists
-        if (customerService.isEmailAlreadyExists(saveCustomer.getEmail())) {
+        // Check if email or username already exists
+        if (usersService.doesUserExist(saveUsers.getEmail())) {
             result.rejectValue("email", "error.customer", "An account with this email already exists");
             return "register-form";
         }
+        if (usersService.doesUserExist(saveUsers.getUsername())) {
+            result.rejectValue("username", "error.customer", "An account with this username already exists");
+            return "register-form";
+        }
 
+        // Save user and handle exceptions
         try {
-            // Save customer to the database
-            customerService.saveCustomer(saveCustomer);
-            
-            // Add success message for login page
+            usersService.saveUsers(saveUsers);
             redirectAttributes.addFlashAttribute("message", "Registration successful! Please login.");
             return "redirect:/login";
         } catch (Exception e) {
-            // Handle any unexpected errors during registration
             model.addAttribute("error", "Registration failed. Please try again.");
             return "register-form";
         }
     }
-
-  
 }

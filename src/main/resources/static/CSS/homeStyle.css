@@ -35,7 +35,7 @@ nav ul li a:hover{
 
 
 .front-home-Div{
-	background-image: url("/photos/pic-3.jpg");
+	background-image: url("/photos/tailor-home-background.jpg");
     height: 520px; 
     width: 100%; 
 	background-repeat: no-repeat;
@@ -47,11 +47,11 @@ nav ul li a:hover{
     justify-content: center;
     align-items: center;
 	background-position: center;
+
 }
 .front-home-Div a {
     text-decoration: none;
     border-radius: 10px;
-    padding: 10px;
     color: red;
 	transition-property: padding;
 	transition-delay: 0.5ms;
@@ -65,12 +65,12 @@ nav ul li a:hover{
 .front-home-Div h1{
 	font-family: cursive;
 	font-size: 60px;
-	color: whitesmoke;
+	color: gold;
 }
 .front-home-Div p{
-	font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-family:cursive;
 	font-size: 30px;
-	color: white;
+	color: silver;
 }
 
 
@@ -83,7 +83,7 @@ nav ul li a:hover{
 	padding-bottom: 30px;
 }
 #services h2{
-	padding-top: 50px;
+	padding-top: 30px;
 }
 .service {
     margin: 20px 0;

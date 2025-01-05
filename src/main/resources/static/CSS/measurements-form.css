@@ -1,0 +1,128 @@
+body {
+    margin: 0;
+    padding: 0;
+	background-color: black;
+	}
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+	font-size: 25px;
+	font-family: cursive;
+}
+nav ul li a:hover{
+	color: gold;
+}
+
+
+
+
+
+.measurement-form-section{
+	padding-top:40px;
+	color:white;
+	text-align: center;
+}
+.measurement-form-section h1{
+	font-size: 30px;
+	font-family: monospace;
+}
+.measurement-form-section p{
+	margin-top:50px;
+	font-size: 18px;
+	font-family: monospace;
+}
+
+
+
+
+.measurement-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Creates 4 equal columns */
+    grid-gap: 20px; /* Adds space between grid items */
+    margin: 50px;
+}
+
+.measurement-field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:white;
+    font-size: 20px;
+}
+
+.measurement-field img {
+    height: 280px;
+    width: 280px;
+    margin-bottom: 10px;
+}
+
+button[type="submit"] {
+    display: block;
+    width: 10%;
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius:10px;
+    cursor: pointer;
+    margin-top:10px;
+    margin-left: 45%;
+   
+}
+
+
+
+
+
+
+
+
+.footer{
+	background-color: #333;
+}
+.footer-container{
+	color: white;
+	display: flex;
+	text-align: center;
+	justify-content: center;
+	justify-content: space-evenly;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	margin-top: 20px;
+}
+.footer .contact-us h2{
+	font-size: 20px;
+}
+.footer .contact-us p{
+	font-size: 14px;
+	font-family: cursive;
+}
+.footer .contact-us a{
+	text-decoration: none;
+	color: crimson;
+	font-family: cursive;
+	padding-right: 32px;
+}
+.footer .contact-us a:hover{
+	color: blue;
+}
+.footer .address p{
+	font-family: cursive;
+}

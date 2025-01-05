@@ -1,30 +1,29 @@
 package com.TMS.tailoring_management.security;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
-import com.TMS.tailoring_management.model.Customer;
-import com.TMS.tailoring_management.repository.CustomerRepository;
+import com.TMS.tailoring_management.model.Users;
+import com.TMS.tailoring_management.repository.UsersRepository;
 
 @Service
 public class CustomUserDetailsService implements UserDetailsService {
 
     @Autowired
-    private CustomerRepository customerRepository;
+    private UsersRepository customerRepository;
 
     @Override
-    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        Customer customer = customerRepository.findByEmail(username)
-                .orElseThrow(() -> new UsernameNotFoundException("User not found with email: " + username));
+    public UserDetails loadUserByUsername(String usernameOrEmail) throws UsernameNotFoundException {
+        Users user = customerRepository.findByEmailOrUsername(usernameOrEmail, usernameOrEmail)
+                .orElseThrow(() -> new UsernameNotFoundException("User not found with email or username: " + usernameOrEmail));
 
         return User.builder()
-                .username(customer.getEmail())
-                .password(customer.getPassword())
-                .roles("CUSTOMER") // Single role for customer
+                .username(user.getUsername()) // Username is prioritized
+                .password(user.getPassword())
+                .roles("CUSTOMER") // Example role
                 .build();
     }
 }

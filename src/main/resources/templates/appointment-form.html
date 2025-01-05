@@ -25,6 +25,16 @@
 
 <section class="appointment-form">
     <h1>Book an Appointment</h1>
+    
+      <!-- Success or Error Message -->
+    <div th:if="${message}" style="color: green; font-weight: bold; text-align: center; margin-bottom: 20px;">
+        <p th:text="${message}"></p>
+    </div>
+    <div th:if="${error}" style="color: red; font-weight: bold; text-align: center; margin-bottom: 20px;">
+        <p th:text="${error}"></p>
+    </div>
+    
+    
     <form th:action="@{/appointments}" th:object="${appointment}" method="post">
     <!-- Customer Name -->
     <div>
@@ -34,11 +44,11 @@
     </div>
 
     <!-- Phone Number -->
-    <div>
-        <label for="phoneNumber">Phone Number:</label>
-        <input type="text" id="phoneNumber" name="phoneNumber" th:field="*{phoneNumber}" required pattern="^\+?[0-9]{10,15}$" title="Please enter a valid phone number">
-        <div th:if="${#fields.hasErrors('phoneNumber')}" th:errors="*{phoneNumber}"></div>
-    </div>
+   <div>
+    <label for="phoneNumber">Phone Number:</label>
+    <input type="text" id="phoneNumber" name="phoneNumber" th:field="*{phoneNumber}" required pattern="^\+?[0-9]{10,15}$" title="Please enter a valid phone number">
+    <div th:if="${#fields.hasErrors('phoneNumber')}" th:errors="*{phoneNumber}"></div>
+</div>
 
     <!-- Email -->
     <div>
