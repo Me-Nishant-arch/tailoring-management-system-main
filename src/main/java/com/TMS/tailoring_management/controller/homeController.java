@@ -52,7 +52,7 @@ public class homeController {
     }
     @GetMapping("/shop")
     public String getShop() {
-    	return "shop";
+    	return "home";
     }
     
     @GetMapping("/measurements")

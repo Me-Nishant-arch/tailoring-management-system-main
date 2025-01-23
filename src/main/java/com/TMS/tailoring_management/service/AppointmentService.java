@@ -44,5 +44,6 @@ public class AppointmentService {
     public void deleteAppointment(Long id) {
         appointmentRepository.deleteById(id);  // Delete appointment by ID from the database
     }
-
+    
+  
 }

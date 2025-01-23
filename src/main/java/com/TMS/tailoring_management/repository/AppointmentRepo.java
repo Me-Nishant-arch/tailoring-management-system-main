@@ -14,5 +14,7 @@ public interface AppointmentRepo extends JpaRepository<Appointment, Long> {
 	public List<Appointment> findByEmail(String email);
 	
 	 boolean existsByPhoneNumber(String phoneNumber);
+	 
+	
 
 }

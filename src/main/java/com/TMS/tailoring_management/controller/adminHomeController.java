@@ -74,4 +74,6 @@ public class adminHomeController {
         }
         return "redirect:/adminHome/appointments"; // Redirect to the appointments list page
     }
+   
+
 }

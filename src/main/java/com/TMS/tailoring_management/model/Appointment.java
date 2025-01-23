@@ -1,10 +1,6 @@
 package com.TMS.tailoring_management.model;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
 import java.util.Date;
@@ -21,21 +17,20 @@ public class Appointment {
     @NotNull(message = "Name is required")
     @Column(name = "Customer_Name")
     private String customerName;
-    
-    @NotNull(message="Phone Number is required")
+
+    @NotNull(message = "Phone Number is required")
     @Column(name = "Customer_Phone")
     private String phoneNumber;
 
-    
-    @NotNull(message="E-mail is required")
-    @Email(message="Plese provide valid email address")
+    @NotNull(message = "E-mail is required")
+    @Email(message = "Please provide a valid email address")
     @Column(name = "Customer_Email", unique = true)
     private String email;
-    
-    @NotNull(message="Please enter your address")
+
+    @NotNull(message = "Please enter your address")
     @Column(name = "Customer_Address")
     private String address;
-    
+
     @NotNull
     @Column(name = "Appointment_Type")
     private String appointmentType;
@@ -48,70 +43,72 @@ public class Appointment {
     @Column(name = "Extra_Details")
     private String details;
 
-	public Long getId() {
-		return id;
-	}
+   
 
-	public void setId(Long id) {
-		this.id = id;
-	}
+    // Getters and Setters
+    public Long getId() {
+        return id;
+    }
 
-	public String getCustomerName() {
-		return customerName;
-	}
+    public void setId(Long id) {
+        this.id = id;
+    }
 
-	public void setCustomerName(String customerName) {
-		this.customerName = customerName;
-	}
+    public String getCustomerName() {
+        return customerName;
+    }
 
-	public String getPhoneNumber() {
-		return phoneNumber;
-	}
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
 
-	public void setPhoneNumber(String phoneNumber) {
-		this.phoneNumber = phoneNumber;
-	}
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
 
-	public String getEmail() {
-		return email;
-	}
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
 
-	public void setEmail(String email) {
-		this.email = email;
-	}
+    public String getEmail() {
+        return email;
+    }
 
-	public String getAddress() {
-		return address;
-	}
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
-	public void setAddress(String address) {
-		this.address = address;
-	}
+    public String getAddress() {
+        return address;
+    }
 
-	public String getAppointmentType() {
-		return appointmentType;
-	}
+    public void setAddress(String address) {
+        this.address = address;
+    }
 
-	public void setAppointmentType(String appointmentType) {
-		this.appointmentType = appointmentType;
-	}
+    public String getAppointmentType() {
+        return appointmentType;
+    }
 
-	public Date getAppointmentDate() {
-		return appointmentDate;
-	}
+    public void setAppointmentType(String appointmentType) {
+        this.appointmentType = appointmentType;
+    }
 
-	public void setAppointmentDate(Date appointmentDate) {
-		this.appointmentDate = appointmentDate;
-	}
+    public Date getAppointmentDate() {
+        return appointmentDate;
+    }
 
-	public String getDetails() {
-		return details;
-	}
+    public void setAppointmentDate(Date appointmentDate) {
+        this.appointmentDate = appointmentDate;
+    }
 
-	public void setDetails(String details) {
-		this.details = details;
-	}
+    public String getDetails() {
+        return details;
+    }
 
-    
+    public void setDetails(String details) {
+        this.details = details;
+    }
+
     
 }
